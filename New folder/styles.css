@@ -1,0 +1,137 @@
+body {
+    background-color: #000; /* Black background for the entire page */
+    color: #fff; /* White text color */
+    font-family: Arial, sans-serif; /* Font family */
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Hide scroll bars */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ensure full viewport height */
+    padding-top: 50px; /* Adjust for space above the ASCII art */
+}
+
+.ascii-container {
+    text-align: center;
+    margin-bottom: 20px; /* Space between ASCII arts */
+}
+
+.ascii-art {
+    font-size: 24px;
+    white-space: pre-wrap;
+}
+
+.ascii-art-static {
+    font-size: 24px;
+    white-space: pre-wrap;
+    text-align: left;
+}
+
+#double {
+    color: #b300b3; /* Purple color for double */
+    animation: spin 10s linear infinite, purple-glow 2s ease-in-out infinite alternate;
+    text-shadow: 
+        0 0 20px #b300b3,
+        0 0 20px #b300b3,
+        0 0 20px #b300b3,
+        0 0 20px #b300b3,
+        0 0 20px #b300b3,
+        0 0 20px #b300b3,
+        0 0 20px #b300b3,
+        0 0 20px #b300b3,
+        0 0 20px #b300b3,
+        0 0 20px #b300b3; /* Adjusted text shadow for pronounced glow */
+}
+
+.audio-controller {
+    position: fixed; /* Position fixed to keep it static on screen */
+    top: 50px; /* Adjust as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #000;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5); /* Red glowing effect */
+    z-index: 999; /* Ensure the button stays on top */
+}
+
+.control-button {
+    background-color: transparent;
+    border: none;
+    color: #f00; /* Red text color */
+    font-size: 16px;
+    cursor: pointer;
+    outline: none;
+}
+
+.control-button:hover {
+    color: #f00; /* Red color on hover */
+}
+
+.footer {
+    position: absolute;
+    bottom: 20px; /* Adjust as needed */
+    width: 100%;
+    text-align: center;
+}
+
+.made-by {
+    font-family: Helvetica, Arial, sans-serif; /* Use Helvetica or fallback to Arial or sans-serif */
+    font-size: 16px; /* Adjust size as needed */
+    color: yellow; /* Yellow text color */
+    text-shadow: 0 0 10px yellow, 0 0 20px yellow, 0 0 30px yellow; /* Initial glowing effect */
+    animation: yellow-glow 2s ease-in-out infinite alternate; /* Yellow glowing animation */
+}
+
+.version {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    font-family: Helvetica, Arial, sans-serif;
+    color: white;
+}
+
+@keyframes yellow-glow {
+    0% { text-shadow: 0 0 10px yellow, 0 0 20px yellow, 0 0 30px yellow; }
+    100% { text-shadow: 0 0 20px yellow, 0 0 30px yellow, 0 0 40px yellow; }
+}
+
+@keyframes spin {
+    0% { transform: rotateY(0); }
+    100% { transform: rotateY(360deg); }
+}
+
+@keyframes purple-glow {
+    0% { text-shadow: 
+        0 0 20px #b300b3,
+        0 0 20px #b300b3,
+        0 0 20px #b300b3,
+        0 0 20px #b300b3,
+        0 0 20px #b300b3,
+        0 0 20px #b300b3,
+        0 0 20px #b300b3,
+        0 0 20px #b300b3,
+        0 0 20px #b300b3,
+        0 0 20px #b300b3; } /* Adjusted text shadow for pronounced glow */
+    100% { text-shadow: 
+        0 0 40px #b300b3,
+        0 0 40px #b300b3,
+        0 0 40px #b300b3,
+        0 0 40px #b300b3,
+        0 0 40px #b300b3,
+        0 0 40px #b300b3,
+        0 0 40px #b300b3,
+        0 0 40px #b300b3,
+        0 0 40px #b300b3,
+        0 0 40px #b300b3; } /* Increased intensity over time */
+}
+
+@keyframes flicker {
+    0%, 18%, 22%, 25%, 53%, 57%, 100% { opacity: 1; }
+    20%, 24%, 55% { opacity: 0; }
+}

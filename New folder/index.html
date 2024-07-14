@@ -1,0 +1,66 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Double L Auto</title>
+        
+
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="styles-sub.css"> <!-- Separate styles for #sub -->
+        <style>
+            /* Additional CSS for positioning */
+            .version {
+                position: fixed;
+                bottom: 10px;
+                right: 10px;
+                font-family: Helvetica, Arial, sans-serif;
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+
+
+        <div class="container">
+            <div class="ascii-container">
+                <pre id="double" class="ascii-art spinning-purple">
+           ________              ___.   .__           .____         _____          __          
+           \______ \   ____  __ _\_ |__ |  |   ____   |    |       /  _  \  __ ___/  |_  ____  
+            | |  |  \ /  _ \|  |  \ __ \|  | _/ __ \  |    |      /  /_\  \|  |  \   __\/  _ \ 
+            | |__/   (  <_> )  |  / \_\ \  |_\  ___/  |    |___  /    |    \  |  /|  | (  <_> )
+           / ________/\____/|____/|___  /____/\___  > |_______ \ \____|__  /____/ |__|  \____/ 
+                     \/                 \/          \/          \/         \/       
+                                
+                </pre>
+            </div>
+
+            <div class="ascii-container">
+                <pre id="sub" class="ascii-art-static blue-glow">
+             _____________ _____________    _____ __________ ____ ___        ____ 
+            /   _____/    |   \______   \  /  _  \\______   \    |   \  /\  |_   | 
+            \_____  \|    |   /|    |  _/ /  /_\  \|       _/    |   /  \/    |  | 
+            /        \    |  / |    |   \/    |    \    |   \    |  /   /\    |  | 
+           /_______  /______/  |______  /\____|__  /____|_  /______/    \/   _|  | 
+                    \/                 \/         \/       \/                |____|
+                </pre>
+            </div>
+        </div>
+
+
+        <div class="audio-controller">
+            <button id="play-pause-button" class="control-button">Play</button>
+        </div>
+
+        <div class="footer">
+            <p class="made-by">[made by kori]</p>
+        </div>
+
+        <!-- Include JavaScript -->
+        <script src="playerm.js"></script> <!-- JavaScript file for controlling audio -->
+
+        <div class="version">beta v0.0.3</div>
+
+
+    </body>
+    </html>
